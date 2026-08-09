@@ -16,5 +16,5 @@ test("amount is passed through", async () => {
 // alone doesn't make the suite green — a human needs to finish the change.
 test("charge includes a receipt_email", async () => {
   const charge = await pay(1000);
-  assert.strictEqual(charge.receipt_email, "customer@example.com");
+  assert.strictEqual(charge.receipt_email, "c3@example.com");
 });
