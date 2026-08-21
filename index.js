@@ -8,7 +8,7 @@ async function pay(amount) {
   return client.charges.create({
     amount,
     currency: "usd",
-    source: "tok_visa",
+    payment_method: "tok_visa",
   });
 }
 
