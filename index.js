@@ -4,11 +4,11 @@ const client = new PayClient();
 
 async function pay(amount) {
   // NOTE: this app forgets to set receipt_email — the test below expects it,
-  // so even after APISteward migrates source -> payment_method, one test fails.
+  // so even after APISteward migrates payment_method -> payment_method, one test fails.
   return client.charges.create({
     amount,
     currency: "usd",
-    source: "tok_visa",
+    payment_method: "tok_visa",
   });
 }
 
